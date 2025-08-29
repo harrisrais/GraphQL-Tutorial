@@ -30,10 +30,16 @@ async function startServer() {
         getAllUsers: [Users]
         getUser(id: ID!): Users
       }
+
+      type Mutation {
+      createUser(name: String!, email: String!, phone: String!, website: String!): Users
+      updateUser(id: ID!, name: String, email: String, phone: String, website: String): Users
+      deleteUser(id: ID!): String
+    }
     `,
         resolvers: {
             Todos: {
-                user: async ( todo ) => {
+                user: async (todo) => {
                     const res = await axios.get(`https://jsonplaceholder.typicode.com/users/${todo.id}`)
                     return res.data
                 }
@@ -52,6 +58,20 @@ async function startServer() {
                     return res.data
                 }
             },
+            Mutation: {
+                createUser: async (parent, args) => {
+                    const res = await axios.post('https://jsonplaceholder.typicode.com/users', args);
+                    return res.data;
+                },
+                updateUser: async (parent, { id, ...rest }) => {
+                    const res = await axios.put(`https://jsonplaceholder.typicode.com/users/${id}`, rest);
+                    return res.data;
+                },
+                deleteUser: async (parent, { id }) => {
+                    await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+                    return `User with id ${id} deleted`;
+                }
+            }
         },
     });
 
