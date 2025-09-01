@@ -19,6 +19,13 @@ async function startServer() {
             email: String!
             phone: String!
             website: String!
+            address: Address
+        }
+
+        type Address {
+            street: String!
+            suite: String!
+            city: String!
         }
 
       type Todos {

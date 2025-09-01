@@ -1,7 +1,7 @@
 exports.USERS = [
   {
     "id": 1,
-    "name": "Leanne Graham",
+    "name": "Haris Raees",
     "username": "Bret",
     "email": "Sincere@april.biz",
     "address": {
@@ -24,7 +24,7 @@ exports.USERS = [
   },
   {
     "id": 2,
-    "name": "Ervin Howell",
+    "name": "Sufyan Ahmed",
     "username": "Antonette",
     "email": "Shanna@melissa.tv",
     "address": {
@@ -47,7 +47,7 @@ exports.USERS = [
   },
   {
     "id": 3,
-    "name": "Clementine Bauch",
+    "name": "Ammar Attique",
     "username": "Samantha",
     "email": "Nathan@yesenia.net",
     "address": {
@@ -70,7 +70,7 @@ exports.USERS = [
   },
   {
     "id": 4,
-    "name": "Patricia Lebsack",
+    "name": "Ali Khan",
     "username": "Karianne",
     "email": "Julianne.OConner@kory.org",
     "address": {
@@ -93,7 +93,7 @@ exports.USERS = [
   },
   {
     "id": 5,
-    "name": "Chelsey Dietrich",
+    "name": "Abdul Muqeet",
     "username": "Kamren",
     "email": "Lucio_Hettinger@annie.ca",
     "address": {
