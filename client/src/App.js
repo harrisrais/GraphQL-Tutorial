@@ -32,7 +32,7 @@ function App() {
             <tr key={todo.id}>
               <td>{todo.id}</td>
               <td>{todo.title}</td>
-              <td>{todo.user.name}</td>
+              <td>{todo?.user?.name}</td>
             </tr>
           ))}
         </tbody>
